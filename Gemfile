@@ -8,7 +8,7 @@ gem 'configatron'
 group :development do
   gem 'guard'
   gem 'guard-bundler'
-  gem 'guard-shell'
+  gem 'guard-depend'
   gem 'guard-rake'
 
   case RbConfig::CONFIG['target_os']

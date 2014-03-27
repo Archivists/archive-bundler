@@ -11,11 +11,20 @@ guard :bundler do
   watch('Gemfile')
 end
 
-guard :rake, task: :spec do
+guard :rake, task: :spec, run_on_start: true do
   watch('Rakefile')
 end
 
-guard :shell, all_on_start: false do
-  watch(%r{^source/.*\.cs})      { `bundle exec rake compile` }
-  watch(%r{^source/.*Specs\.cs}) { `bundle exec rake spec` }
+guard :depend,
+  output_paths: Proc.new { Dir['build/bin/*.dll'] },
+  cmd: %w(bundle exec rake compile),
+  run_on_start: false do
+    watch(%r{^source/.*(?<!Specs)\.cs$}i)
+end
+
+guard :depend,
+  output_paths:  Proc.new { Dir['build/spec/*Specs.dll', 'build/spec/spec.xml'] },
+  cmd: %w(bundle exec rake spec),
+  run_on_start: false do
+    watch(%r{^source/.*Specs\.cs$}i)
 end
