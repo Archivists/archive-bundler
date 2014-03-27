@@ -1,0 +1,12 @@
+*.bak
+*~
+~*
+
+*.suo
+*.user
+bin/
+obj/
+
+build/
+deploy/
+tmp/
