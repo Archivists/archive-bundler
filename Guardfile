@@ -11,7 +11,7 @@ guard :bundler do
   watch('Gemfile')
 end
 
-guard :rake, task: :default do
+guard :rake, task: :spec do
   watch('Rakefile')
 end
 
