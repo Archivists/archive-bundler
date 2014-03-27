@@ -9,4 +9,5 @@ obj/
 
 build/
 deploy/
+packages/
 tmp/

@@ -7,8 +7,8 @@ configatron.solution = Proc.new { configatron.role + '.sln' }
 task default: :compile
 
 task :configure do
-  def add_tools_to_path
-    tools = ['tools/*', 'tools/*/bin']
+  def add_tools_to_path(*tools)
+    tools = ['tools/*', 'tools/*/bin'] if tools.empty?
 
     paths = Dir[*tools].map { |path| File.expand_path(path) }
     paths << ENV['PATH']
@@ -21,6 +21,7 @@ end
 
 task nuget_restore: :configure do
   sh('nuget', 'restore', configatron.solution!.call)
+  add_tools_to_path('packages/**/tools')
 end
 
 desc "Compiles #{configatron.role!}"
@@ -34,5 +35,7 @@ end
 
 desc "Runs specs for #{configatron.role!}"
 task spec: :compile do
-  puts 'spec'
+  cmd = %w(nunit-console.exe) << Dir.glob('build/spec/*Specs.dll')
+
+  sh(*cmd.flatten)
 end
