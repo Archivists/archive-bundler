@@ -8,7 +8,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4D5890
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bundler.Core", "source\Bundler.Core\Bundler.Core.csproj", "{F135CBD3-414E-4360-982E-9104C67A704E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specs", "source\Specs\Specs.csproj", "{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F135CBD3-414E-4360-982E-9104C67A704E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F135CBD3-414E-4360-982E-9104C67A704E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F135CBD3-414E-4360-982E-9104C67A704E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F135CBD3-414E-4360-982E-9104C67A704E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
