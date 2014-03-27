@@ -35,7 +35,7 @@ end
 
 desc "Runs specs for #{configatron.role!}"
 task spec: :compile do
-  cmd = %w(nunit-console.exe) << Dir.glob('build/spec/*Specs.dll')
+  cmd = %w(nunit-console.exe /result=build/spec/spec.xml) << Dir.glob('build/spec/*Specs.dll')
 
   sh(*cmd.flatten)
 end
