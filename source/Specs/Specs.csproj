@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,6 +53,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="inputs\complete\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\invalid dobbin.result.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\invalid dobbin.result.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\invalid meta.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\invalid meta.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="inputs\missing dobbin.result.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
@@ -72,6 +85,7 @@
     <Content Include="inputs\files for another job\some job id\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="inputs\missing mp3\PBC-ISB-000000-A\another.mp3" />
     <Content Include="inputs\missing mp3\PBC-ISB-000000-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
