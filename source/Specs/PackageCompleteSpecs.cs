@@ -12,14 +12,14 @@ namespace Specs
   public class When_package_is_checked_for_completeness : Spec
   {
     [Test]
-    [TestCase("inputs/complete/PBC-ISB-001365-A", true)]
-    [TestCase("inputs/missing dobbin.result.xml/PBC-ISB-001365-A", false)]
-    [TestCase("inputs/missing meta.xml/PBC-ISB-001365-A", false)]
-    [TestCase("inputs/missing mp3 from dobbin.result.xml/PBC-ISB-001365-A", false)]
-    [TestCase("inputs/missing mp3 from meta.xml/PBC-ISB-001365-A", false)]
+    [TestCase("inputs/complete/single result/PBC-ISB-001365-A", true)]
+    [TestCase("inputs/missing/dobbin.result.xml/PBC-ISB-001365-A", false)]
+    [TestCase("inputs/missing/meta.xml/PBC-ISB-001365-A", false)]
+    [TestCase("inputs/missing/mp3 from dobbin.result.xml/PBC-ISB-001365-A", false)]
+    [TestCase("inputs/missing/mp3 from meta.xml/PBC-ISB-001365-A", false)]
     [TestCase("inputs/files for another job/some job id", false)]
-    [TestCase("inputs/invalid dobbin.result.xml/PBC-ISB-001365-A", false)]
-    [TestCase("inputs/invalid meta.xml/PBC-ISB-001365-A", false)]
+    [TestCase("inputs/invalid/dobbin.result.xml/PBC-ISB-001365-A", false)]
+    [TestCase("inputs/invalid/meta.xml/PBC-ISB-001365-A", false)]
     public void Should_check_files(string path, bool expected)
     {
       if (!Directory.Exists(path))
