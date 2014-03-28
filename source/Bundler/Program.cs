@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Bundler.Core;
 
 using Topshelf;
 
@@ -10,9 +10,9 @@ namespace Bundler
     {
       HostFactory.Run(x =>
       {
-        x.Service<Listener>(s =>
+        x.Service<Runner>(s =>
         {
-          s.ConstructUsing(name => new Listener());
+          s.ConstructUsing(name => new Runner(Options.FromAppSettings()));
           s.WhenStarted(l => l.Start());
           s.WhenStopped(l => l.Stop());
         });
@@ -26,17 +26,6 @@ namespace Bundler
         x.SetDisplayName("Bundler");
         x.SetServiceName("Bundler");
       });
-    }
-  }
-
-  class Listener
-  {
-    public void Start()
-    {
-    }
-
-    public void Stop()
-    {
     }
   }
 }
