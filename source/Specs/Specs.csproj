@@ -48,22 +48,22 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
+    <Content Include="inputs\complete\single result with 1 track\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+    <Content Include="inputs\complete\single result with 1 track\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+    <Content Include="inputs\complete\single result with 1 track\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3">
+    <Content Include="inputs\complete\single result with 1 track\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.dobbin.result.xml">
+    <Content Include="inputs\complete\single result with 1 track\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.dobbin.result.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.meta.xml">
+    <Content Include="inputs\complete\single result with 1 track\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.meta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="inputs\complete\single result\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
@@ -123,21 +123,6 @@
     <Content Include="inputs\missing\mp3 from dobbin.result.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.dobbin.result.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.meta.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="inputs\missing\mp3 from tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -161,6 +146,9 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>rmdir /s /q "$(TargetDir)"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

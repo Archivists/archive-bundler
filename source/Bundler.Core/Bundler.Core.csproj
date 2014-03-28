@@ -36,8 +36,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IExpectation.cs" />
+    <Compile Include="Expectations\Dobbin.cs" />
+    <Compile Include="Expectations\ExpectationBuilder.cs" />
+    <Compile Include="Expectations\IExpectation.cs" />
     <Compile Include="Job.cs" />
+    <Compile Include="Expectations\Meta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

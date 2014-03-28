@@ -60,7 +60,7 @@ namespace Specs
     [Test]
     public void Should_report_the_error()
     {
-      CollectionAssert.Contains(_job.UnmetExpectations, "Expected that the directory \"path does not exists\" exists");
+      CollectionAssert.Contains(_job.UnmetExpectations, "Expected that the directory \"path does not exists\" exists.");
     }
   }
 
@@ -68,7 +68,7 @@ namespace Specs
   {
     [Test]
     [TestCase("inputs/complete/single result/PBC-ISB-001365-A")]
-    [TestCase("inputs/complete/single result with tracks/PBC-ISB-001365-A")]
+    [TestCase("inputs/complete/single result with 1 track/PBC-ISB-001365-A")]
     public void Should_not_have_unmet_expectations(string path)
     {
       Ensure.DirectoryExists(path);
