@@ -47,6 +47,24 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\complete\single result with tracks\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="inputs\complete\single result\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -102,6 +120,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="inputs\missing\mp3 from dobbin.result.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing\mp3 from tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing\mp3 from tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing\mp3 from tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing\mp3 from tracks\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing\mp3 from tracks\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.meta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

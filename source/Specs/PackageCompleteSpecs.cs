@@ -13,10 +13,12 @@ namespace Specs
   {
     [Test]
     [TestCase("inputs/complete/single result/PBC-ISB-001365-A", true)]
+    [TestCase("inputs/complete/single result with tracks/PBC-ISB-001365-A", true)]
     [TestCase("inputs/missing/dobbin.result.xml/PBC-ISB-001365-A", false)]
     [TestCase("inputs/missing/meta.xml/PBC-ISB-001365-A", false)]
     [TestCase("inputs/missing/mp3 from dobbin.result.xml/PBC-ISB-001365-A", false)]
     [TestCase("inputs/missing/mp3 from meta.xml/PBC-ISB-001365-A", false)]
+    [TestCase("inputs/missing/mp3 from tracks/PBC-ISB-001365-A", false)]
     [TestCase("inputs/files for another job/some job id", false)]
     [TestCase("inputs/invalid/dobbin.result.xml/PBC-ISB-001365-A", false)]
     [TestCase("inputs/invalid/meta.xml/PBC-ISB-001365-A", false)]
@@ -50,7 +52,7 @@ namespace Specs
 
       var jobId = Path.GetFileName(path);
 
-      var dobbinResults = Directory.GetFiles(path, jobId + "*.dobbin.result.xml", SearchOption.TopDirectoryOnly);
+      var dobbinResults = Directory.GetFiles(path, jobId + "*.dobbin.result.xml", SearchOption.AllDirectories);
       if (!dobbinResults.Any())
       {
         return false;
@@ -61,7 +63,7 @@ namespace Specs
         return false;
       }
 
-      var metas = Directory.GetFiles(path, jobId + "*.meta.xml", SearchOption.TopDirectoryOnly);
+      var metas = Directory.GetFiles(path, jobId + "*.meta.xml", SearchOption.AllDirectories);
       if (!metas.Any())
       {
         return false;
