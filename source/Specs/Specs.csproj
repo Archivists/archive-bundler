@@ -30,12 +30,54 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PackageCompleteSpecs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="inputs\complete\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\complete\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\complete\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing dobbin.result.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing dobbin.result.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing meta.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing meta.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\files for another job\some job id\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\files for another job\some job id\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing mp3\PBC-ISB-000000-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing mp3\PBC-ISB-000000-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
