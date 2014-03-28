@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bundler.Core", "source\Bund
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specs", "source\Specs\Specs.csproj", "{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bundler", "source\Bundler\Bundler.csproj", "{224EDA56-351C-4FE3-88F9-26EA4A97F908}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
