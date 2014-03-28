@@ -39,8 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IExpectation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PackageCompleteSpecs.cs" />
+    <Compile Include="JobSpecs.cs" />
     <Compile Include="Spec.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +123,21 @@
     <Content Include="inputs\missing\mp3 from dobbin.result.xml\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.dobbin.result.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputs\missing\mp3 from tracks - Copy\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="inputs\missing\mp3 from tracks\PBC-ISB-001365-A\PBC-ISB-001365-A-MP3-48-256-ACCESS.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -137,6 +153,12 @@
     <Content Include="inputs\missing\mp3 from tracks\PBC-ISB-001365-A\tracks\PBC-ISB-001365-A-01.mp3.meta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bundler.Core\Bundler.Core.csproj">
+      <Project>{F135CBD3-414E-4360-982E-9104C67A704E}</Project>
+      <Name>Bundler.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
