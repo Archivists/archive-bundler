@@ -82,6 +82,13 @@ namespace Bundler.Core.Expectations
           yield return new Fail("No files in path \"{0}\" match the pattern {1}.", path, trackMetaFilePattern);
         }
 
+        //Check for wav and mp3 file for the track
+        if (files.Count() < 2)
+        {
+            yield return new Fail("Expected two XML files for track (MP3 and WAV) but found one.");
+            yield break;
+        }
+
         foreach (var file in files)
         {
           yield return ReferenceToAudioFile(file);

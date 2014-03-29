@@ -70,4 +70,17 @@ namespace Bundler.Core.Expectations
       return Directory.Exists(_path);
     }
   }
+
+  class Success : IExpectation
+  {
+      public string GetMessage()
+      {
+          return null;
+      }
+
+      public bool Verify()
+      {
+          return true;
+      }
+  }
 }

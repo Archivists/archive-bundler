@@ -54,7 +54,7 @@ namespace Specs
     [Test]
     public void Should_not_be_ready_for_processing()
     {
-      Assert.IsFalse(_job.IsReadForProcessing);
+      Assert.IsFalse(_job.IsReadyForProcessing);
     }
 
     [Test]

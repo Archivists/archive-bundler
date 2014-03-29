@@ -19,7 +19,7 @@ namespace Bundler.Core
 
     public IEnumerable<string> UnmetExpectations { get; private set; }
 
-    public bool IsReadForProcessing
+    public bool IsReadyForProcessing
     {
       get
       {
@@ -53,7 +53,7 @@ namespace Bundler.Core
       return String.Format("Job ID {0} based off of {1} is {2}ready for processing{3}",
                            Id,
                            BasePath,
-                           IsReadForProcessing ? "" : "not ",
+                           IsReadyForProcessing ? "" : "not ",
                            UnmetExpectations.Any() ? " because of:" + Environment.NewLine + failed : "");
     }
 

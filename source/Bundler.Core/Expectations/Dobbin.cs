@@ -10,6 +10,7 @@ namespace Bundler.Core.Expectations
   {
     const string Pattern = "*.dobbin.result.xml";
     const string AudioFile = "string(/Dobbin/Path/text())";
+    const string Status = "string(/Dobbin/Result/text())";
 
     public static IEnumerable<IExpectation> Expectations(Job job)
     {
@@ -25,9 +26,16 @@ namespace Bundler.Core.Expectations
         yield break;
       }
 
+      if (files.Count() < 5)
+      {
+          yield return new Fail("Top level file set is not complete.");
+          yield break;
+      }
+
       foreach (var file in files)
       {
         yield return ReferenceToAudioFile(file);
+        yield return StatusSuccess(file);
       }
     }
 
@@ -42,6 +50,22 @@ namespace Bundler.Core.Expectations
       {
         return new Fail(String.Format("Expected that {0} is valid XML and contains element at {1}", file, AudioFile));
       }
+    }
+
+    static IExpectation StatusSuccess(string file)
+    {
+        try
+        {
+            var status = file.Extract(Status).ToString();
+            if (status != "success")
+                return new Fail("Dobbin task error.");
+            
+            return new Success();
+        }
+        catch (XmlException)
+        {
+            return new Fail(String.Format("Expected that {0} is valid XML and contains element at {1}", file, AudioFile));
+        }
     }
   }
 }
