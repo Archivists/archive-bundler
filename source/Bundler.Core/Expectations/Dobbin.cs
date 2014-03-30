@@ -26,7 +26,7 @@ namespace Bundler.Core.Expectations
         yield break;
       }
 
-      if (files.Count() < 5)
+      if (files.Count() < 4)
       {
           yield return new Fail("Top level file set is not complete.");
           yield break;
