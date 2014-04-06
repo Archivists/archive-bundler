@@ -49,11 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Expectations\Dobbin.cs" />
+    <Compile Include="Expectations\DobbinExpectation.cs" />
     <Compile Include="Expectations\ExpectationBuilder.cs" />
+    <Compile Include="Expectations\FileExistsExpectation.cs" />
+    <Compile Include="Expectations\DirectoryExists.cs" />
+    <Compile Include="Expectations\SuccessExpectation.cs" />
+    <Compile Include="Expectations\FailExpectation.cs" />
     <Compile Include="Expectations\IExpectation.cs" />
     <Compile Include="Job.cs" />
-    <Compile Include="Expectations\Meta.cs" />
+    <Compile Include="Expectations\TracksExpectation.cs" />
     <Compile Include="Listener.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

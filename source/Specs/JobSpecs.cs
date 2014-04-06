@@ -27,7 +27,7 @@ namespace Specs
     [TestCase("inputs/complete/single result/PBC-ISB-001365-A")]
     public void Should_create_a_job(string path)
     {
-      var job = Job.Scan(path);
+      var job = Job.Scan("", path);
       Assert.IsInstanceOf<Job>(job);
     }
 
@@ -35,7 +35,7 @@ namespace Specs
     [TestCase("inputs/complete/single result/PBC-ISB-001365-A")]
     public void Should_describe_to_job(string path)
     {
-      var job = Job.Scan(path);
+        var job = Job.Scan("", path);
       Assert.AreEqual(
                       "Job ID PBC-ISB-001365-A based off of inputs/complete/single result/PBC-ISB-001365-A is ready for processing",
                       job.ToString());
@@ -48,7 +48,7 @@ namespace Specs
 
     protected override void Because()
     {
-      _job = Job.Scan("path does not exists");
+        _job = Job.Scan("", "path does not exists");
     }
 
     [Test]
@@ -73,7 +73,7 @@ namespace Specs
     {
       Ensure.DirectoryExists(path);
 
-      var job = Job.Scan(path);
+      var job = Job.Scan("", path);
       CollectionAssert.IsEmpty(job.UnmetExpectations);
     }
   }
@@ -92,7 +92,7 @@ namespace Specs
     {
       Ensure.DirectoryExists(path);
 
-      var job = Job.Scan(path);
+      var job = Job.Scan("", path);
       CollectionAssert.IsNotEmpty(job.UnmetExpectations);
       Assert.IsNotEmpty(job.ToString());
     }
