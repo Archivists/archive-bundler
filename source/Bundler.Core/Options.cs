@@ -9,7 +9,7 @@ namespace Bundler.Core
     public string Workflow { get; set; }
     public string Sips { get; set; }
     public string Staging { get; set; }
-    public string Archive { get; set; }
+    public string DeepArchive { get; set; }
 
     public static Options FromAppSettings()
     {
@@ -20,7 +20,7 @@ namespace Bundler.Core
                Workflow = ConfigurationManager.AppSettings["Workflow"],
                Sips = ConfigurationManager.AppSettings["SIPS"],
                Staging = ConfigurationManager.AppSettings["Staging"],
-               Archive = ConfigurationManager.AppSettings["Archive"]
+               DeepArchive = ConfigurationManager.AppSettings["Deep Archive"]
              };
     }
   }
