@@ -15,7 +15,7 @@ namespace Bundler.Core
     public void Start()
     {
         _subscription = Listener
-          .Register(_options.Dobbin)
+          .Register(_options.Dobbin, _options.Filter)
           .Subscribe(s => Console.WriteLine(Job.Scan(s).ToString()));
         //.Subscribe(s => {
         //    var j= Job.Scan(s);
