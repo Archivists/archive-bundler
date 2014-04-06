@@ -51,9 +51,9 @@ namespace Bundler.Core
     public override string ToString()
     {
       var failed = "- " + String.Join(Environment.NewLine + "- ", UnmetExpectations);
-      return String.Format("Job ID {0} based off of {1} is {2} ready for processing {3}",
+      return String.Format("Job ID {0} located at {1} is {2} ready for processing {3}",
                            Id,
-                           EventFileDirectory,
+                           JobDirectory,
                            IsReadyForProcessing ? "" : "not ",
                            UnmetExpectations.Any() ? " because of:" + Environment.NewLine + failed : "");
     }
