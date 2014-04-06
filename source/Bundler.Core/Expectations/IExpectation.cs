@@ -62,7 +62,7 @@ namespace Bundler.Core.Expectations
 
     public string GetMessage()
     {
-      return String.Format("Expected that the directory \"{0}\" exists.", _path);
+      return String.Format("Expected that directory \"{0}\" exists.", _path);
     }
 
     public bool Verify()

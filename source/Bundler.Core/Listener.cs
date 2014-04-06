@@ -15,6 +15,7 @@ namespace Bundler.Core
         var disp = new CompositeDisposable();
 
         var fsw = CreateFileSystemWatcher(path, filter);
+        fsw.IncludeSubdirectories = true;
 
         disp.Add(fsw);
 

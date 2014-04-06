@@ -12,17 +12,17 @@ namespace Bundler.Core.Expectations
     const string AudioFile = "string(/MetaData/Files/Set[@Type='audio']/File/FileName/text())";
     const string NumberOfTracks = "count(/MetaData/AdlTrackList/AdlTrack)";
 
-    public static IEnumerable<IExpectation> BuildExpectations(Job job)
+    public static IEnumerable<IExpectation> Expectations(Job job)
     {
-      if (!Directory.Exists(job.BasePath))
+      if (!Directory.Exists(job.Directory))
       {
         yield break;
       }
 
-      var files = Directory.GetFiles(job.BasePath, job.Id + Pattern, SearchOption.TopDirectoryOnly);
+      var files = Directory.GetFiles(job.Directory, job.Id + Pattern, SearchOption.TopDirectoryOnly);
       if (!files.Any())
       {
-        yield return new Fail("No files in path \"{0}\" match the pattern {1}.", job.BasePath, Pattern);
+        yield return new Fail("No files in path \"{0}\" match the pattern {1}.", job.Directory, Pattern);
         yield break;
       }
 
@@ -63,7 +63,7 @@ namespace Bundler.Core.Expectations
         yield break;
       }
 
-      var path = Path.Combine(job.BasePath, "tracks");
+      var path = Path.Combine(job.Directory, "tracks");
       if (!Directory.Exists(path))
       {
         yield return new Fail("Path \"{0}\" does not exist.", path);

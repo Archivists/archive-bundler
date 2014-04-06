@@ -14,15 +14,15 @@ namespace Bundler.Core.Expectations
 
     public static IEnumerable<IExpectation> Expectations(Job job)
     {
-      if (!Directory.Exists(job.BasePath))
+      if (!Directory.Exists(job.Directory))
       {
         yield break;
       }
 
-      var files = Directory.GetFiles(job.BasePath, job.Id + Pattern, SearchOption.TopDirectoryOnly);
+      var files = Directory.GetFiles(job.Directory, job.Id + Pattern, SearchOption.TopDirectoryOnly);
       if (!files.Any())
       {
-        yield return new Fail("No files in path \"{0}\" match the pattern {1}.", job.BasePath, Pattern);
+        yield return new Fail("No files in path \"{0}\" match the pattern {1}.", job.Directory, Pattern);
         yield break;
       }
 
