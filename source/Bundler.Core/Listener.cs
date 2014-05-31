@@ -16,6 +16,7 @@ namespace Bundler.Core
 
         var fsw = CreateFileSystemWatcher(path, filter);
         fsw.IncludeSubdirectories = true;
+        fsw.InternalBufferSize = 65536;
 
         disp.Add(fsw);
 
