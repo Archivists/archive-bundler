@@ -12,11 +12,13 @@ namespace Bundler.Core
     Job(string dobbin, string path)
     {
 
-      EventFile = path;
-      EventFileDirectory = Path.GetDirectoryName(path);
-      Filename = Path.GetFileName(path);
-      Id = Filename.Substring(0, 16);
-      JobDirectory = Path.Combine(dobbin, Id);
+      Id = path.Remove(0, dobbin.Length + 1);
+      JobDirectory = path;
+
+      Console.WriteLine(String.Format("Inspecting Job ID {0} located at {1}",
+                           Id,
+                           JobDirectory));
+      
 
       var expectations = BuildExpectations();
       UnmetExpectations = expectations.Where(x => !x.Verify()).Select(x => x.GetMessage());
@@ -31,13 +33,7 @@ namespace Bundler.Core
         return !UnmetExpectations.Any();
       }
     }
-
-    public string EventFile { get; private set; }
-
-    public string EventFileDirectory { get; private set; }
-        
-    public string Filename { get; private set; }
-
+   
     public string Id { get; private set; }
 
     public string JobDirectory { get; private set; }

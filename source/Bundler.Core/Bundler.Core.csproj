@@ -58,7 +58,6 @@
     <Compile Include="Expectations\IExpectation.cs" />
     <Compile Include="Job.cs" />
     <Compile Include="Expectations\TracksExpectation.cs" />
-    <Compile Include="Listener.cs" />
     <Compile Include="Mover.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

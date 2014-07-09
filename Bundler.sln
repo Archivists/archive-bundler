@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4D589062-6C49-4E72-B11C-ACB1B55CAE44}"
 	ProjectSection(SolutionItems) = preProject
@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4D5890
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bundler.Core", "source\Bundler.Core\Bundler.Core.csproj", "{F135CBD3-414E-4360-982E-9104C67A704E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specs", "source\Specs\Specs.csproj", "{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bundler", "source\Bundler\Bundler.csproj", "{224EDA56-351C-4FE3-88F9-26EA4A97F908}"
 EndProject
@@ -24,10 +22,6 @@ Global
 		{F135CBD3-414E-4360-982E-9104C67A704E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F135CBD3-414E-4360-982E-9104C67A704E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F135CBD3-414E-4360-982E-9104C67A704E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BAE2E506-FF12-4E68-B3E4-4797D98D0E1A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Release|Any CPU.ActiveCfg = Release|Any CPU

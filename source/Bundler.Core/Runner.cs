@@ -1,31 +1,38 @@
 ﻿using System;
+using System.IO;
 
 namespace Bundler.Core
 {
   public class Runner
   {
     readonly Options _options;
-    IDisposable _subscription;
+    Boolean _run;
 
     public Runner(Options options)
     {
       _options = options;
+      _run = true;
     }
 
     public void Start()
     {
-        _subscription = Listener
-          .Register(_options.Dobbin, _options.Filter)
-          //.Subscribe(s => Console.WriteLine(Job.Scan(_options.Dobbin, s).ToString()));
-          .Subscribe(s => {
-            var j= Job.Scan(_options.Dobbin, s);
-            Console.WriteLine(j);
-            if (j.IsReadyForProcessing)
-            {
-              var mover = new Mover(_options, j);
-              mover.PrepareBundles();
-            }
-        });
+      Console.WriteLine("Bundler started. Polling for jobs...");
+      while (_run)
+      {
+        System.Threading.Thread.Sleep(5000);
+        //Console.WriteLine("Cycled.");
+        string [] subdirectoryEntries = Directory.GetDirectories(_options.Dobbin);
+        foreach (string subdirectory in subdirectoryEntries)
+        {
+          Console.WriteLine(subdirectory);
+          var j = Job.Scan(_options.Dobbin, subdirectory);
+          if (j.IsReadyForProcessing)
+          {
+            var mover = new Mover(_options, j);
+            mover.PrepareBundles();
+          }
+        }
+      }
     }
 
     private void MoveFiles(Job j)
@@ -35,7 +42,7 @@ namespace Bundler.Core
 
     public void Stop()
     {
-      _subscription.Dispose();
+      _run = false;
     }
   }
 }

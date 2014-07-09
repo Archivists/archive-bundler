@@ -36,14 +36,6 @@ namespace Bundler.Core.Expectations
         yield return StatusSuccess(file);
       }
 
-      // If the event was triggered by a *.dobbin.result.xml in the tracks directory, then check
-      // for reference audio file and success status here as well.
-      if (job.EventFile.Contains("tracks"))
-      {
-        yield return ReferenceToAudioFile(job.EventFile);
-        yield return StatusSuccess(job.EventFile);
-      }
-
     }
 
     static IExpectation ReferenceToAudioFile(string file)
