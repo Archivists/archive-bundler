@@ -1,48 +1,45 @@
 ﻿using System;
 using System.IO;
+using System.Timers;
+
 
 namespace Bundler.Core
 {
   public class Runner
   {
     readonly Options _options;
-    Boolean _run;
+    Timer timer;
 
     public Runner(Options options)
     {
       _options = options;
-      _run = true;
     }
 
     public void Start()
     {
-      Console.WriteLine("Bundler started. Polling for jobs...");
-      while (_run)
+      timer = new Timer(15000);
+      timer.Elapsed += OnTimedEvent;
+      timer.Enabled = true;
+    }
+
+    private void OnTimedEvent(Object source, ElapsedEventArgs e)
+    {
+      string[] subdirectoryEntries = Directory.GetDirectories(_options.Dobbin);
+      foreach (string subdirectory in subdirectoryEntries)
       {
-        System.Threading.Thread.Sleep(5000);
-        //Console.WriteLine("Cycled.");
-        string [] subdirectoryEntries = Directory.GetDirectories(_options.Dobbin);
-        foreach (string subdirectory in subdirectoryEntries)
+        var j = Job.Scan(_options.Dobbin, subdirectory);
+        if (j.IsReadyForProcessing)
         {
-          Console.WriteLine(subdirectory);
-          var j = Job.Scan(_options.Dobbin, subdirectory);
-          if (j.IsReadyForProcessing)
-          {
-            var mover = new Mover(_options, j);
-            mover.PrepareBundles();
-          }
+          var mover = new Mover(_options, j);
+          mover.PrepareBundles();
         }
       }
     }
 
-    private void MoveFiles(Job j)
-    {
-        throw new NotImplementedException();
-    }
-
     public void Stop()
     {
-      _run = false;
+      timer.Stop();
+      timer.Dispose();
     }
   }
 }
