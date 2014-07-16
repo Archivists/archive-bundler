@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using log4net;
+using Topshelf;
+using Topshelf.Logging;
 
-namespace Bundler.Core
+namespace Bundler
 {
   public class Mover
   {
@@ -14,6 +15,7 @@ namespace Bundler.Core
     const string Pattern = "*.wav*";
     private Options _options;
     private Job _job;
+    static readonly LogWriter _log = HostLogger.Get<Mover>();
 
 
     public Mover(Options options, Job job)
@@ -33,7 +35,7 @@ namespace Bundler.Core
     public bool PrepareBundles()
     {
 
-      Console.WriteLine("Preparing bundles for Archive ID {0}", ArchiveId);
+      _log.Info(String.Format("Preparing bundles for Archive ID {0}", ArchiveId));
 
       var result = true;
       result = CopyWorkflow();
@@ -43,9 +45,9 @@ namespace Bundler.Core
         result = PrepareSIP();
 
       if (result)
-        Console.WriteLine("Successfully processed Dobbin job {0} for Archive ID {1}", _job.Id, ArchiveId);
+        _log.Info(String.Format("Successfully processed Dobbin job {0} for Archive ID {1}", _job.Id, ArchiveId));
       else
-        Console.WriteLine("There was a problem processing Dobbin job {0}", _job.Id);
+       _log.Info(String.Format("There was a problem processing Dobbin job {0}", _job.Id));
       return result;
     }
 
@@ -60,7 +62,7 @@ namespace Bundler.Core
       }
       catch (Exception e)
       {
-        Console.WriteLine("An error occured in Mover.CopyWorkflow: {0}", e.Message);
+        _log.Info(String.Format("An error occured in Mover.CopyWorkflow: {0}", e.Message));
         return false;
       }
     }
@@ -77,7 +79,7 @@ namespace Bundler.Core
       }
       catch (Exception e)
       {
-        Console.WriteLine("An error occured in Mover.PrepareForArchive: {0}", e.Message);
+        _log.Info(String.Format("An error occured in Mover.PrepareForArchive: {0}", e.Message));
         return false;
       }
     }
@@ -103,7 +105,7 @@ namespace Bundler.Core
       }
       catch (Exception e)
       {
-        Console.WriteLine("An error occured in Mover.PrepareSIP: {0}", e.Message);
+        _log.Info(String.Format("An error occured in Mover.PrepareSIP: {0}", e.Message));
         return false;
       }
     }

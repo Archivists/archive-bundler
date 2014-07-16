@@ -1,6 +1,4 @@
-﻿using Bundler.Core;
-
-using Topshelf;
+﻿using Topshelf;
 
 namespace Bundler
 {

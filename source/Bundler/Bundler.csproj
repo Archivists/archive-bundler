@@ -38,8 +38,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.XML" />
     <Reference Include="Topshelf">
       <HintPath>..\..\packages\Topshelf.3.1.3\lib\net40-full\Topshelf.dll</HintPath>
     </Reference>
@@ -49,8 +51,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Expectations\DirectoryExists.cs" />
+    <Compile Include="Expectations\DobbinExpectation.cs" />
+    <Compile Include="Expectations\ExpectationBuilder.cs" />
+    <Compile Include="Expectations\FailExpectation.cs" />
+    <Compile Include="Expectations\FileExistsExpectation.cs" />
+    <Compile Include="Expectations\IExpectation.cs" />
+    <Compile Include="Expectations\SuccessExpectation.cs" />
+    <Compile Include="Expectations\TracksExpectation.cs" />
+    <Compile Include="Job.cs" />
+    <Compile Include="Mover.cs" />
+    <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -58,12 +72,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bundler.Core\Bundler.Core.csproj">
-      <Project>{F135CBD3-414E-4360-982E-9104C67A704E}</Project>
-      <Name>Bundler.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

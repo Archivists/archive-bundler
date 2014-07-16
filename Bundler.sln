@@ -8,8 +8,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4D5890
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bundler.Core", "source\Bundler.Core\Bundler.Core.csproj", "{F135CBD3-414E-4360-982E-9104C67A704E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bundler", "source\Bundler\Bundler.csproj", "{224EDA56-351C-4FE3-88F9-26EA4A97F908}"
 EndProject
 Global
@@ -18,10 +16,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F135CBD3-414E-4360-982E-9104C67A704E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F135CBD3-414E-4360-982E-9104C67A704E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F135CBD3-414E-4360-982E-9104C67A704E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F135CBD3-414E-4360-982E-9104C67A704E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{224EDA56-351C-4FE3-88F9-26EA4A97F908}.Release|Any CPU.ActiveCfg = Release|Any CPU
