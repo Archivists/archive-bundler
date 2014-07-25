@@ -31,7 +31,7 @@ namespace Bundler
       if (jobs.Count == 0)
       {
         jobs.AddRange((Directory.GetDirectories(_options.Dobbin)));
-        //_log.Info(String.Format("Job queue length after directory scan is {0}", jobs.Count));
+        _log.Debug(String.Format("Job queue length after directory scan is {0}", jobs.Count));
         foreach (string jobDirectory in new System.Collections.ArrayList(jobs))
         {
           var j = Job.Scan(_options.Dobbin, jobDirectory);
@@ -40,11 +40,11 @@ namespace Bundler
             var mover = new Mover(_options, j);
             mover.PrepareBundles();
             jobs.Remove(jobDirectory);
-            _log.Info(String.Format("Job queue length after job was processed is {0}", jobs.Count));
+            _log.Debug(String.Format("Job queue length after job was processed is {0}", jobs.Count));
           } else
           {
-            _log.Info(j.ToString());
-            _log.Info(String.Format("Removing {0} from job queue as it is not ready for processing", jobDirectory));
+            _log.Debug(j.ToString());
+            _log.Debug(String.Format("Removing {0} from job queue as it is not ready for processing", jobDirectory));
             jobs.Remove(jobDirectory);
             
           }

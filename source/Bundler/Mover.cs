@@ -47,7 +47,7 @@ namespace Bundler
       if (result)
         _log.Info(String.Format("Successfully processed Dobbin job {0} for Archive ID {1}", _job.Id, ArchiveId));
       else
-       _log.Info(String.Format("There was a problem processing Dobbin job {0}", _job.Id));
+        _log.Error(String.Format("There was a problem processing Dobbin job {0}", _job.Id));
       return result;
     }
 
@@ -62,7 +62,7 @@ namespace Bundler
       }
       catch (Exception e)
       {
-        _log.Info(String.Format("An error occured in Mover.CopyWorkflow: {0}", e.Message));
+        _log.Error(String.Format("An error occured in Mover.CopyWorkflow: {0}", e.Message));
         return false;
       }
     }
@@ -79,7 +79,7 @@ namespace Bundler
       }
       catch (Exception e)
       {
-        _log.Info(String.Format("An error occured in Mover.PrepareForArchive: {0}", e.Message));
+        _log.Error(String.Format("An error occured in Mover.PrepareForArchive: {0}", e.Message));
         return false;
       }
     }
@@ -105,7 +105,7 @@ namespace Bundler
       }
       catch (Exception e)
       {
-        _log.Info(String.Format("An error occured in Mover.PrepareSIP: {0}", e.Message));
+        _log.Error(String.Format("An error occured in Mover.PrepareSIP: {0}", e.Message));
         return false;
       }
     }
