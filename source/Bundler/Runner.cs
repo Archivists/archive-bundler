@@ -28,6 +28,7 @@ namespace Bundler
 
     private void OnTimedEvent(Object source, ElapsedEventArgs e)
     {
+      _log.Debug("OnTimedEvent called");
       if (jobs.Count == 0)
       {
         jobs.AddRange((Directory.GetDirectories(_options.Dobbin)));

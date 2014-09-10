@@ -28,7 +28,9 @@ namespace Bundler
     {
       get
       {
-        return _job.Id.Substring(0, 14);
+        //return _job.Id.Substring(0, 14);
+        //Remove the -A or -B side - since we just want the partent Archive ID
+        return _job.Id.Substring(0, _job.Id.Length - 2);
       }
     }
 
