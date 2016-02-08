@@ -11,6 +11,8 @@ guard :bundler do
   watch('Gemfile')
 end
 
+# zweite Änderung
+
 guard :rake, task: :spec, run_on_start: true do
   watch('Rakefile')
 end
