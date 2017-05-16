@@ -1,6 +1,8 @@
 require 'rake'
 require 'configatron'
 
+puts 'Hello'
+
 configatron.role = 'bundler'
 configatron.solution = Proc.new { configatron.role + '.sln' }
 
