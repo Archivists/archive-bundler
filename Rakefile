@@ -5,6 +5,7 @@ configatron.role = 'bundler'
 configatron.solution = Proc.new { configatron.role + '.sln' }
 # will be a conflict
 # Improvement
+# Blah
 task default: :compile
 
 task :configure do
