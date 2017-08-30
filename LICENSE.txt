@@ -3,10 +3,10 @@
 # directories 
 # Version: 0.9 Beta
 
-# Authors: Alexander Groﬂ, Anthony Bouch
+# Authors: Alexander Gro√ü, Anthony Bouch
 
 #
- Copyritght (C) 2014 Alexander Groﬂ <agross@therightstuff.de>, Anthony Bouch <tony@58bits.com>
+ xxxxCopyritght (C) 2014 Alexander Gro√ü <agross@therightstuff.de>, Anthony Bouch <tony@58bits.com>
 
 #
 #
