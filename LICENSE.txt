@@ -6,7 +6,7 @@
 # Authors: Alexander Groﬂ, Anthony Bouch
 
 #
- Copyritght (C) 2014 Alexander Groﬂ <agross@therightstuff.de>, Anthony Bouch <tony@58bits.com>
+ Copyright (C) 2017 Alexander Groﬂ <agross@therightstuff.de>, Anthony Bouch <tony@58bits.com>
 
 #
 #
