@@ -1,1 +1,2 @@
 irgendwas zum konflikt
+contents for file-04.txt
