@@ -11,7 +11,7 @@ namespace Specs
 
     protected virtual void Because()
     {
-			// bugfix
+      // bugfix
     }
 
     [TestFixtureSetUp]
