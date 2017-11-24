@@ -11,13 +11,6 @@ namespace Bundler
   {
     Job(string dobbin, string path)
     {
-
-      Id = path.Remove(0, dobbin.Length + 1);
-      JobDirectory = path;
-
-      // Console.WriteLine(String.Format("Inspecting Job ID {0} located at {1}", Id, JobDirectory));
-      var expectations = BuildExpectations();
-      UnmetExpectations = expectations.Where(x => !x.Verify()).Select(x => x.GetMessage());
     }
 
     public IEnumerable<string> UnmetExpectations { get; private set; }
