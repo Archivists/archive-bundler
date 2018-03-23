@@ -1,6 +1,6 @@
-# Archivists Bundler - a Windows Service that will move completed audio files and 
+# Archivists Bundler - a Windows Service that will move completed audio files and
 # related metadata from the audio processing directory to final archive and SIP
-# directories 
+# directories
 # Version: 0.9 Beta
 
 # Authors: Alexander Groß, Anthony Bouch
