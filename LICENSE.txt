@@ -6,7 +6,7 @@
 # Authors: Alexander Groß, Anthony Bouch
 
 #
- Copyritght (C) 2018 Alexander Groß <agross@therightstuff.de>, Anthony Bouch <tony@58bits.com>
+ Copyright (C) 2018 Alexander Groß <agross@therightstuff.de>, Anthony Bouch <tony@58bits.com>
 
 #
 #
