@@ -3,14 +3,12 @@
 # directories 
 # Version: 0.9 Beta
 
-# Authors: Alexander Groﬂ, Anthony Bouch
+# Authors: Alexander Gro√ü, Anthony Bouch
+
+# Copyritght (C) 2014 Alexander Gro√ü <agross@therightstuff.de>, Anthony Bouch <tony@58bits.com>
 
 #
- Copyritght (C) 2014 Alexander Groﬂ <agross@therightstuff.de>, Anthony Bouch <tony@58bits.com>
-
-#
-#
- This program is free software: you can redistribute it and/or modify
+# This program is free software: you can redistribute it and/or modify
 
 # it under the terms of the GNU Affero General Public License as published by
 
