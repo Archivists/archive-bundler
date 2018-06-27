@@ -9,6 +9,10 @@ end
 
 foo
 
+guard :foo do
+  watch('*.css') { puts 'something changed' }
+end
+
 guard :bundler do
   watch('Gemfile')
 end
