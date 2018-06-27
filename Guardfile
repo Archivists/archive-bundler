@@ -11,6 +11,7 @@ foo
 
 guard :foo do
   watch('*.css') { puts 'something changed' }
+  watch('*.sass') { puts 'something changed' }
 end
 
 guard :bundler do
