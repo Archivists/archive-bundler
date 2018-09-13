@@ -7,7 +7,7 @@ when /mac|darwin/i
   notification :growl
 end
 
-puts 'mein tolles feature'
+puts 'Mein tolles Feature!'
 
 guard :bundler do
   watch('Gemfile')
