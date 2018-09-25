@@ -10,7 +10,7 @@ end
 guard :bundler do
   watch('Gemfile')
   watch('Barfile')
-  watch('Foofile')
+  watch(/foofile/i)
 end
 
 guard :rake, task: :spec, run_on_start: true do
