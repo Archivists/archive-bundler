@@ -10,6 +10,7 @@ end
 guard :bundler do
   watch('Gemfile')
   watch('Barfile')
+  watch('Foofile')
 end
 
 guard :rake, task: :spec, run_on_start: true do
