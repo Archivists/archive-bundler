@@ -17,15 +17,15 @@ guard :rake, task: :spec, run_on_start: true do
 end
 
 guard :depend,
-  output_paths: Proc.new { Dir['build/bin/*.dll'] },
-  cmd: %w(bundle exec rake compile),
-  run_on_start: false do
-    watch(%r{^source/.*(?<!Specs)\.cs$}i)
+      output_paths: Proc.new { Dir['build/bin/*.dll'] },
+      cmd: %w(bundle exec rake compile),
+      run_on_start: false do
+  watch(%r{^source/.*(?<!Specs)\.cs$}i)
 end
 
 guard :depend,
-  output_paths:  Proc.new { Dir['build/spec/*Specs.dll', 'build/spec/spec.xml'] },
-  cmd: %w(bundle exec rake spec),
-  run_on_start: false do
-    watch(%r{^source/.*Specs\.cs$}i)
+      output_paths:  Proc.new { Dir['build/spec/*Specs.dll', 'build/spec/spec.xml'] },
+      cmd: %w(bundle exec rake spec),
+      run_on_start: false do
+  watch(%r{^source/.*Specs\.cs$}i)
 end
