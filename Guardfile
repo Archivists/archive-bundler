@@ -13,6 +13,7 @@ end
 
 guard :rake, task: :spec, run_on_start: true do
   watch('Rakefile')
+  watch('Barfile')
 end
 
 guard :depend,
