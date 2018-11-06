@@ -12,7 +12,7 @@ guard :bundler do
 end
 
 guard :rake, task: :spec, run_on_start: true do
-  watch('Rakefile')
+  watch(/^rakefile$/i)
 end
 
 guard :depend,
