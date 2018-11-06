@@ -13,6 +13,7 @@ end
 
 guard :rake, task: :spec, run_on_start: true do
   watch(/^rakefile$/i)
+  watch('Foofile')
 end
 
 guard :depend,
